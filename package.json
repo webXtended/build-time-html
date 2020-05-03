@@ -1,0 +1,39 @@
+{
+  "name": "build-time-html",
+  "version": "1.0.0",
+  "main": "./dist/js/bundle.js",
+  "license": "MIT",
+  "scripts": {
+    "build-comp": "webpack --config ./webpack/webpack.component.config.js",
+    "build-html": "webpack --config ./webpack/webpack.html.config.js",
+    "build": "yarn build-comp && yarn build-html",
+    "dev": "webpack --config ./webpack/webpack.component.config.js",
+    "html": "webpack --config ./webpack/webpack.html.config.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
+    "html-webpack-plugin": "^4.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "css-loader": "^3.5.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.1.4",
+    "ts-loader": "^7.0.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.8.3",
+    "typings-for-css-modules-loader": "npm:@teamsupercell/typings-for-css-modules-loader@^2.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
