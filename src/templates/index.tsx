@@ -56,8 +56,10 @@ function Page(props: PageProps) {
             {props.inlineCss ? getInlineCSS(props.inlineCss) : null}
             {props.cssLinks ? generateCSSLinkTags(props.cssLinks) : null}
         </head>
-        <body>{getBody(props.body, props.compProps || {})}</body>
+        <body>
+        {getBody(props.body, props.compProps || {})}
         {props.scripts ? generateScriptTags(props.scripts) : null}
+        </body>
         </html>
     );
 }
